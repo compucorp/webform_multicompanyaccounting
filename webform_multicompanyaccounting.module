@@ -1,1 +1,10 @@
 <?php
+
+/**
+ * Implements of hook form_alter()
+ */
+function webform_multicompanyaccounting_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == 'wf_crm_configure_form') {
+    drupal_add_js(drupal_get_path('module', 'webform_multicompanyaccounting') . '/js/webform_multicompanyaccounting.js');
+  }
+}
